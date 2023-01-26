@@ -1,9 +1,14 @@
 html,body{
 	margin: 0px;
-
-	
+	width: 100% !important;
 
 }
+
+/*@media (max-width: 600px){*/
+	/**{
+		width:90%;
+	}*/
+/*}*/
 *:hover{
 	cursor: url(https://ani.cursors-4u.net/cursors/cur-13/cur1163.ani), url(https://ani.cursors-4u.net/cursors/cur-13/cur1163.png), auto !important;
 }
@@ -14,9 +19,10 @@ body{
 
 .navbar{
 	position: fixed;
-	width:100%;overflow: none;
+	width:100%;
+	overflow: none;
 	background: linear-gradient(60deg,#212121,#504257);
-/*	background-color: #ff00dd;*/
+
 	z-index: 1;
 }
 
@@ -32,9 +38,12 @@ body{
 	text-shadow: 1px 1px white;
 	
 }
-@media (max-width: 300px){
+@media (max-width: 600px){
 	.brandnav{
 		font-size: 2rem;
+	}
+	.navbar{
+		width: 100%;
 	}
 }
 .ulnav{
@@ -103,18 +112,22 @@ body{
 	background-image:url('img/cover.jpg');
 	background-position: center;
 	margin-top: 5%;
+	width: 100%;
 
 }
 #cover h1{
 	padding-top: 12%;
 }
 
-@media (max-width: 400px){
+@media (max-width: 600px){
+	#cover{
+		margin-top: 10%;
+	}
 	#cover h1{
-		font-size: 1rem;
+		font-size: 1.5rem;
 	}
 	#cover h3{
-		font-size: 0.8rem;
+		font-size: 1rem;
 	}
 }
 
@@ -129,6 +142,8 @@ body{
 	color: white;
 	letter-spacing: 2px;
 	line-height: 5px;
+	scroll-margin-top: 300px;
+	max-width: 100%;
 
 }
 hr{
@@ -226,6 +241,8 @@ a button{
 }
 #project{
 	color: white;
+	 scroll-margin-top: 100px;
+	 max-width: 100%;
 }
 .project-container{
 	margin-left:10%;
@@ -250,8 +267,8 @@ a button{
 }
 @media only screen and (max-width: 600px){
 	.project-container div img{
-	height: 150px;
-	width: 150px;
+	height: 100px;
+	width: 100px;
 	}
 	.project-container div h4{
 		font-size: small;
@@ -262,6 +279,7 @@ a button{
 	color:white;
 }
 
+
 #skills{
 	margin-top: 10%;
 	font-family: 'Kanit', sans-serif;
@@ -271,14 +289,35 @@ a button{
 	color: white;
 	letter-spacing: 2px;
 	line-height: 5px;
+	scroll-margin-top: 300px;
 		/*background-image: url('img/skills.jpg');
 	background-position: center;
 	background-size: cover;*/
+}
+.w-100 {
+  width: 100% !important;
+  height: 75vh;
+}
+#skills div{
+
+	border: 1px groove #ff00dd;
+	box-shadow:3px 3px 12px #ff00dd;
+	border-radius: 2px;
 
 }
 
-  
-.slider{
+
+ @media (max-width:600px){
+ 	#skills{
+ 		margin: 5%;
+ 		margin-top: 30%;
+ 	}
+ 	.w-100 {
+  max-width: 100% !important;
+  height: 45vh;
+	}
+}
+/*.slider{
   width: 800px;
   height: 500px;
   border-radius: 10px;
@@ -286,9 +325,9 @@ a button{
   border: 5px groove #ff00dd;
   box-shadow:5px 5px 18px #ff00dd;
 
-}
+}*/
 
-.slides{
+/*.slides{
   width: 500%;
   height: 500px;
   display: flex;
@@ -309,7 +348,7 @@ a button{
 }
 
 /*css for manual slide navigation*/
-
+/*
 .navigation-manual{
   position: absolute;
   width: 800px;
@@ -366,7 +405,7 @@ a button{
 
 
 /*css for automatic navigation*/
-
+/*
 .navigation-auto{
   position: absolute;
   display: flex;
@@ -417,32 +456,33 @@ a button{
 @media only screen and (max-width: 800px){
 
 .slider{
-
-		width:450px;
+		width:auto;
 		height:250px;
 	}
 	
 	.slide img{
-  width: 450px;
+  width: 80%;
   height: 300px;
 }
 .navigation-manual{
-width:450px;
+width:80%;
 margin-top: -280px;
 font-size: smaller;
 }
 .navigation-auto{
-	width:450px;
+	width:auto;
 	margin-top: 220px;
 
 }
 .navigation-auto div{
 	font-size: smaller;
 }
-}
+
+}*/
 #footer{
 	margin:2%;
 	color: white;
+	 scroll-margin-top: 100px;
 }
 #footer svg{
 
@@ -450,17 +490,15 @@ font-size: smaller;
 	width:30px;
 }
 @media only screen and (max-width: 800px){
-#footer svg{
+		#footer svg{
 
-	height:30px;
-	width:30px;
-}
-#footer p{
-	text-align: left;
-	font-size: xx-small;
-	
-}
-
+			height:30px;
+			width:30px;
+		}
+		#footer p{
+			font-size: xx-small;
+			text-align: center;
+		}
 }
 
 
