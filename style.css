@@ -122,10 +122,12 @@ body{
 
 @media (max-width: 600px){
 	#cover{
-		margin-top: 10%;
+		margin-top: 35%;
+
 	}
 	#cover h1{
 		font-size: 1.5rem;
+		
 	}
 	#cover h3{
 		font-size: 1rem;
@@ -271,8 +273,17 @@ a button{
 	height: 100px;
 	width: 100px;
 	}
-	.project-container div h4{
-		font-size: small;
+	.project-container div h5{
+		font-size: xx-small;
+	}
+}
+@media only screen and (max-width: 350px){
+	.project-container div img{
+	height: 80px;
+	width: 80px;
+	}
+	.project-container div{
+		width: 34vh;
 	}
 }
 .project-container a{
@@ -294,12 +305,12 @@ a button{
 		
 }
 .carousel {
-  width:740px;
-  height:75vh;
+  width:640px;
+  height:65vh;
 }
 .w-100 {
-  width: 100% !important;
-  height: 75vh;
+/*  width: 100% !important;*/
+  height: 65vh;
 }
 
 #skills div{
@@ -313,16 +324,16 @@ a button{
 
  @media (max-width:600px){
  	#skills{
- 		margin: 5%;
+ 		margin: 7%;
  		margin-top: 30%;
  	}
  	.w-100 {
   max-width: 100% !important;
-  height: 45vh;
+  height: 35vh;
 	}
 	.carousel{
-		width:75vh;
-		height: 45vh;
+		width:280px;
+		height: 35vh;
 	}
 }
 
