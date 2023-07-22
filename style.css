@@ -2,7 +2,10 @@
 html,body{
 	margin: 0px;
 	width: 100% !important;
-
+	
+}
+*{
+	box-sizing: border-box;
 }
 
 /*@media (max-width: 600px){*/
@@ -242,9 +245,12 @@ a button{
   opacity: 1;
 }
 #project{
+	margin-top: 5%; 
 	color: white;
 	 scroll-margin-top: 300px;
 	 max-width: 100%;
+	 height:100vh;
+	
 }
 .project-container{
 	margin-left:10%;
@@ -253,6 +259,7 @@ a button{
 	display: grid;
 	grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
 	grid-gap: 15%;
+	overflow: scroll;
 }
 .project-container div{
 	text-align: center;
@@ -275,9 +282,9 @@ a button{
 	.project-container div h5{
 		font-size: xx-small;
 	}
-	/*.project-container {
-		justify-content: center;
-	}*/
+	.project{
+		height:100vh;
+	}
 }
 @media only screen and (max-width: 350px){
 	.project-container div img{
@@ -287,6 +294,9 @@ a button{
 	.project-container div{
 		width: 34vh;
 	}
+	.project{
+		height:100vh;
+	}
 }
 .project-container a{
 	text-decoration: none;
@@ -295,7 +305,8 @@ a button{
 
 
 #skills{
-	margin-top: 10%;
+	margin-top: 10%; /* Adjust the top margin as needed */
+    margin-bottom: 5%;
 	font-family: 'Kanit', sans-serif;
 	display: grid;
 	align-items: center;
@@ -327,7 +338,7 @@ a button{
  @media (max-width:600px){
  	#skills{
  		margin: 7%;
- 		margin-top: 50%;
+ 		margin-top: 13%;
  	}
  	.w-100 {
   max-width: 100% !important;
