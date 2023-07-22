@@ -249,19 +249,27 @@ a button{
 	color: white;
 	 scroll-margin-top: 300px;
 	 max-width: 100%;
-	 height:100vh;
+	
 	
 }
 .project-container{
-	margin-left:10%;
-	margin-right: 10%;
+	margin-left:3%;
+	margin-right: 3%;
 	color:white;
 	display: grid;
-	grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
-	grid-gap: 15%;
-	overflow: scroll;
+	grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+	grid-gap: 10%;
+	font-size: small;
+	
+}
+.project-container h5{
+	font-size: small;
 }
 .project-container div{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 	text-align: center;
 	border: 1px groove #ff00dd;
 	box-shadow:3px 3px 12px #ff00dd;
@@ -274,7 +282,14 @@ a button{
 	box-shadow:5px 5px 18px #ff00dd;
 
 }
+.project-container div img{
+	height: 100px;
+	width: 100px;
+	}
 @media only screen and (max-width: 600px){
+	.project-container{
+		overflow: scroll;
+	}
 	.project-container div img{
 	height: 100px;
 	width: 100px;
@@ -287,6 +302,9 @@ a button{
 	}
 }
 @media only screen and (max-width: 350px){
+	.project-container{
+		overflow: scroll;
+	}
 	.project-container div img{
 	height: 80px;
 	width: 80px;
@@ -305,7 +323,8 @@ a button{
 
 
 #skills{
-	margin-top: 10%; /* Adjust the top margin as needed */
+ /* Adjust the top margin as needed */
+	margin-top: 10%;
     margin-bottom: 5%;
 	font-family: 'Kanit', sans-serif;
 	display: grid;
@@ -338,7 +357,7 @@ a button{
  @media (max-width:600px){
  	#skills{
  		margin: 7%;
- 		margin-top: 13%;
+ 		margin-top: 5%;
  	}
  	.w-100 {
   max-width: 100% !important;
