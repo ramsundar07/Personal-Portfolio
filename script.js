@@ -1,5 +1,4 @@
 function reveal() {
-
   var reveals = document.querySelectorAll(".reveal");
 
   for (var i = 0; i < reveals.length; i++) {
@@ -16,20 +15,24 @@ function reveal() {
 }
 
 function myFunction() {
-  // Get the text field
-  let div = document.getElementById('phn');
-  let text = div.innerText;
-  let textArea  = document.createElement('textarea');
-  textArea.width  = "1px"; 
-  textArea.height = "1px";
-  textArea.background =  "transparents" ;
-  textArea.value = text;
-  document.body.append(textArea);
-  textArea.select();
-  document.execCommand('copy');   //No i18n
-  document.body.removeChild(textArea);
-
+  const textToCopy = '+91 9003925642';
+  navigator.clipboard.writeText(textToCopy).then(() => {
+    alert("Phone number copied to clipboard!");
+  }).catch(err => {
+    console.error('Failed to copy text: ', err);
+    // Fallback for older browsers
+    let textArea = document.createElement('textarea');
+    textArea.value = textToCopy;
+    document.body.appendChild(textArea);
+    textArea.select();
+    try {
+      document.execCommand('copy');
+      alert("Phone number copied to clipboard!");
+    } catch (err) {
+      console.error('Fallback copy failed: ', err);
+    }
+    document.body.removeChild(textArea);
+  });
 }
 
 window.addEventListener("scroll", reveal);
-
